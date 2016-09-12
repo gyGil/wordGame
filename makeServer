@@ -1,0 +1,14 @@
+# System Programming Assignment 4
+# spA4Server
+# writer: Geun Young Gil (6944920)
+
+./bin/spA4Server : ./obj/spA4Server.o
+	cc ./obj/spA4Server.o -o ./bin/spA4Server -lpthread
+
+./obj/spA4Server.o : ./src/spA4Server.c
+	cc -c ./src/spA4Server.c -o ./obj/spA4Server.o -lpthread
+
+clean:
+	rm -f ./obj/*.o
+	rm -f ./bin/spA4Server
+	rm -f *~

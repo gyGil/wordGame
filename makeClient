@@ -1,0 +1,14 @@
+# System Programming Assignment 4
+# spA4Client
+# writer: Geun Young Gil (6944920)
+
+./bin/spA4Client : ./obj/spA4Client.o
+	cc ./obj/spA4Client.o -o ./bin/spA4Client
+
+./obj/spA4Client.o : ./src/spA4Client.c
+	cc -c ./src/spA4Client.c -o ./obj/spA4Client.o
+
+clean:
+	rm -f ./obj/*.o
+	rm -f ./bin/spA4Client
+	rm -f *~
